@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.LoginController">
+    <stylesheets>
+        <URL value="@/res/style.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="50.0" prefHeight="500.0" prefWidth="280.0" spacing="10.0">
+         <children>
+            <Label fx:id="wrongAcc" style="-fx-background-color: #ffd0d0;" text="Sai tên đăng nhập hoặc mật khẩu" textFill="#ff3030" visible="false" />
+            <ImageView fitHeight="180.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/login.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="65.0" text="Username" />
+                  <JFXTextField fx:id="txtUser" focusColor="#ff3030" prefHeight="25.0" prefWidth="160.0" />
+                  <Label fx:id="flagUser" text="*" textFill="#ff3030" visible="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="65.0" text="Password" />
+                  <JFXPasswordField fx:id="txtPass" focusColor="#ff3030" prefHeight="25.0" prefWidth="160.0" />
+                  <Label fx:id="flagPass" text="*" textFill="#ff3030" visible="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <JFXButton fx:id="btnLogin" prefHeight="40.0" prefWidth="90.0" styleClass="btn" stylesheets="@../res/style.css" text="Đăng nhập" />
+                  <JFXButton fx:id="btnExit" prefHeight="40.0" prefWidth="90.0" styleClass="btn" stylesheets="@../res/style.css" text="Thoát" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
